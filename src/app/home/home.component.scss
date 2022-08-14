@@ -1,0 +1,39 @@
+.custom-card {
+    width: 18%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 1%;
+    border-left: 5px solid #b4b426bc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    display: inline-block;
+}
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 80px;
+    height: 40px;
+    padding: 5px;
+    font: 12px sans-serif;
+    background: black;
+    color: white;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    vertical-align: middle;
+    z-index: 10;
+  }
+
+//   .doughnutCanvas {
+//     width: 20px !important;
+//     height: 20px  !important;
+//   }

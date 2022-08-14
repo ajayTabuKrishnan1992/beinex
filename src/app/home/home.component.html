@@ -1,0 +1,42 @@
+<div class="container-fluid bg-light">
+    <div class="row">
+        <div style="width: 100%; overflow: hidden;" class="mt-5">
+            <div class="card custom-card" *ngFor="let item of tileCardContent">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h4 style="color: #719395;font-weight: bold;">
+                            <circle-progress [percent]="item.percentage" [radius]="20"
+                                [outerStrokeWidth]="item.showProgress ? 2 : 0" [showSubtitle]="false"
+                                [title]="item.count" [showInnerStroke]="false" [units]="''"
+                                [outerStrokeColor]="'#78C000'" [animation]="true"
+                                [outerStrokeColor]="item.outerStrokeColor" [animationDuration]="300">
+                            </circle-progress>
+                        </h4>
+
+                    </div>
+                    <div class="col-lg-8">
+                        <span class="vertical-center text-muted">{{item.name}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-lg-4">
+            <h5 style="font-weight: bold;     padding-bottom: 3rem;">Task Distribution</h5>
+            <div class="chart-container" style="position: relative; height:21vh; width:21vw">
+                <canvas #doughnutCanvas id="doughnutCanvas"></canvas>
+            </div>
+
+        </div>
+        <div class="col-lg-4">
+            <h5 style="font-weight: bold;     padding-bottom: 5rem;">Tasks By Beinex Sectors</h5>
+            <canvas #bars id="bars" style="height:100px; width:10vw"></canvas>
+        </div>
+        <div class="col-lg-4">
+            <h5 style="font-weight: bold;    padding-bottom: 5rem;">Task By Aura</h5>
+            <canvas #barCanvas id="barCanvas" style="height:100px; width:10vw"></canvas>
+        </div>
+    </div>
+
+</div>

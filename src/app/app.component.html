@@ -1,0 +1,44 @@
+<nav class="d-flex flex-column flex-shrink-0 bg-light" [ngClass]="showSideBar ? 'w-side-lg' : 'w-side-sm'"
+  style="height: 100vh;" id="sidebar">
+  <ul class="list-unstyled components" [ngClass]="showSideBar ? '' : 'text-center'">
+    <p>
+      <i (click)="showHideNavBar()" class="fa fa-bars" aria-hidden="true"></i>
+    </p>
+    <li class="active">
+      <a href="#homeSubmenu">
+        <i class="fa fa-home">
+          
+        </i>
+        <span *ngIf="showSideBar">&nbsp; Home</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="fa fa-suitcase" aria-hidden="true">
+          
+        </i>
+        <span *ngIf="showSideBar">&nbsp; Account</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="fa fa-calendar" aria-hidden="true">
+          
+        </i>
+        <span *ngIf="showSideBar">&nbsp; Schedule</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+<div class="bg-light" [ngClass]="showSideBar ? 'w-top-lg' : 'w-top-sm'">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light row">
+    <a class="col-lg-4 navbar-brand" href="#">
+      <img src="../assets/images/logo.svg" style="padding-left: 10%; width: 150px; height: auto; transition: all .3s;"
+        alt="Brand Logo">
+    </a>
+    <div class="col-lg-4 text-center" style="color: #456a8a;">
+      <h5>Executive Dashboard</h5>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
